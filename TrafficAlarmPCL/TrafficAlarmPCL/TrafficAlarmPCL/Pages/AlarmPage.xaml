@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrafficAlarmPCL.AlarmPage"
+             Title="Detalhes">
+    
+    <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Hora para chegada:" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <DatePicker Date="{Binding DatePicked}"  Grid.Row="0" Grid.Column="1" />
+            <TimePicker Time="{Binding TimePicked}" Grid.Row="1" Grid.Column="1"/>
+
+
+
+            <Label Text="Origem:" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Entry Text="{Binding Origin}" Grid.Row="2" Grid.Column="1" />
+
+            <Label Text="Destino:" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Entry Text="{Binding Destiny}" Grid.Row="3" Grid.Column="1" />
+
+        </Grid>
+
+        <Label Text="Alarme | Notificação" HorizontalOptions="Center" FontAttributes="Bold"/>
+        <Switch x:Name="switcher" HorizontalOptions="Center"/>
+
+        <Button Text="Salvar" HorizontalOptions="FillAndExpand" BackgroundColor="AliceBlue" Clicked="Save_Clicked"/>
+        <Button Text="Excluir" HorizontalOptions="FillAndExpand" BackgroundColor="#df776e" Clicked="Delete_Clicked"/>
+
+    </StackLayout>
+    
+    
+    
+</ContentPage>

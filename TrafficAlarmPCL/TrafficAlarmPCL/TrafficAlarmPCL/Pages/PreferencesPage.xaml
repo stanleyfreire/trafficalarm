@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrafficAlarmPCL.Pages.PreferencesPage"
+             Title="Preferências">
+
+    <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Tempo de atualização:" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Picker x:Name="refreshTimes" Grid.Row="0" Grid.Column="1" />
+
+            <Label Text="Threshold:" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Picker x:Name="thresholdTimes" Grid.Row="1" Grid.Column="1" />
+
+            <Label Text="Tempo de Preparo:" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Picker x:Name="setupTimes" Grid.Row="2" Grid.Column="1" />
+
+            <Label Text="Método de Locomoção:" Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Picker x:Name="calculationMethods" Grid.Row="3" Grid.Column="1" />
+
+        </Grid>
+
+
+        <Button Text="Salvar" HorizontalOptions="FillAndExpand" BackgroundColor="AliceBlue"/>
+        
+        <Label FontSize="Small" FontAttributes="Italic" HorizontalOptions="Start" VerticalOptions="Center" Text="Tempo de atualização: Tempo que o app irá atualizar o ETA dos alarmes." />
+        <Label FontSize="Small" FontAttributes="Italic" HorizontalOptions="Start" VerticalOptions="Center" Text="Threshold: Tempo para não ser incomodado caso o ETA do alarme ultrapasse este valor." />
+        <Label FontSize="Small" FontAttributes="Italic" HorizontalOptions="Start" VerticalOptions="Center" Text="Tempo de Preparo: Tempo aproximado que o usuário leva para ficar pronto." />
+        <Label FontSize="Small" FontAttributes="Italic" HorizontalOptions="Start" VerticalOptions="Center" Text="Método de Locomoção: Carro ou Bicicleta." />
+
+
+    </StackLayout>
+
+</ContentPage>
